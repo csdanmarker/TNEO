@@ -1,0 +1,66 @@
+// ==============================================
+//				Active Modal
+// ==============================================
+
+body.active-modal{
+	/* Disables body scrolling when a dialogue box is open */
+	overflow:hidden;
+}
+
+.modal-box:before, .modal-box:after { 
+	content: "\0020"; display: block; height: 0; overflow: hidden; 
+}
+
+.modal-box:after { 
+	clear: both; 
+}
+
+.modal{
+	visibility: hidden;
+	opacity:0;
+	position: fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:1050;
+	outline: 0;
+	overflow-y:scroll;
+	background: fade(@black, 70%);
+	zoom: 1;
+	
+	.transition(.5s all ease); 
+
+	&.active{
+		visibility: visible;
+		opacity: 1;
+		.transition(); 
+	}
+}
+
+.modal-box{
+	width:37.5rem;
+	background:@white;
+	border-radius:@global-radius;
+	max-width:100%;
+	display:block;
+	margin:2rem auto;
+	padding:.625rem 1.25rem;
+	clear:both;
+}
+
+.modal .navigation{
+	display:block;
+}
+
+.modal-next{
+	float:right;
+}
+
+.modal-prev{
+	float:left;
+}
+
+a[data-fire], .modal-next, .modal-prev{
+	cursor:pointer;
+}

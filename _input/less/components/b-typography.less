@@ -1,0 +1,212 @@
+// ==============================================
+//				Typography
+// ==============================================
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: @heading-font-family;
+	font-weight: normal;
+	font-style: normal;
+	color: @font-color;
+	line-height: initial;
+	text-rendering: optimizeLegibility;
+	margin-bottom: .75rem;
+	margin-top:1.5rem;
+	font-weight: normal;
+	line-height: 1.4;
+}
+
+h1 {
+	font-size: 2.125rem; 
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.25rem;
+}
+
+h5 {
+	font-size: 1rem;
+}
+
+h6 {
+	// text-transform: uppercase;
+}
+
+p  {
+	color:@font-color;
+}
+
+a {
+	color: @link-color;
+}
+
+a:focus, a:hover{
+	color: darken(@link-color, 10%);
+}
+
+
+@media only screen and (min-width: @medium-up) {
+	
+	h1 {
+		font-size: 2.225rem; 
+	}
+
+	h2 {
+		font-size: 1.85rem;
+	}
+
+	h3 {
+		font-size: 1.6rem;
+	}
+
+	h4 {
+		font-size: 1.35rem;
+	}
+
+	h5 {
+		font-size: 1.1rem;
+	}
+
+	h6 {
+		// text-transform: uppercase;
+	}
+}
+
+@media only screen and (min-width: @large-up) {
+	h1 {
+		font-size: 2.325rem; 
+	}
+
+	h2 {
+		font-size: 1.95rem;
+	}
+
+	h3 {
+		font-size: 1.7rem;
+	}
+
+	h4 {
+		font-size: 1.45rem;
+	}
+
+	h5 {
+		font-size: 1.2rem;
+	}
+
+	h6 {
+		// text-transform: uppercase;
+	}
+}
+
+
+ul {
+	margin-bottom:1rem;
+}
+
+address {
+	font-style: normal;
+}
+
+dl dt {
+	font-weight: 500;
+}
+
+dd {
+	margin-left: 1em;
+}
+
+blockquote {
+	font-size: @base-font-size;
+	font-style: italic;
+	padding: 0 0 0 1rem;
+	margin: 1rem 0 1rem 1rem;
+	border-left: 2px solid @mono-color;
+}
+
+blockquote p {
+	margin-bottom: .5em;
+}
+
+blockquote small, small {
+	font-size: @base-font-size - .3rem;
+	line-height: 1;
+}
+
+del {text-decoration: line-through;}
+abbr[title],
+dfn[title] {
+	border-bottom: 1px dotted #000;
+	cursor: help;
+}
+
+strong,
+b {font-weight: bold;}
+em,
+i {font-style: italic;}
+sub,
+sup {
+	font-size: @base-font-size - .6rem;
+	line-height: 0;
+	position: relative;
+}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+pre,
+code,
+kbd,
+samp {
+	font-size: 90%;
+	font-family: @code-font-family;
+}
+pre {
+	font-size: @base-font-size - .2rem;
+	line-height: 1.45em;
+	color: @font-color;
+	background: #f6f6f6;
+	padding: 2rem;
+	overflow: auto;
+	border: 1px solid lighten(@disabled, 30%);
+	word-wrap: break-word;
+	padding: 6px 10px;
+	line-height: 19px;
+	margin-bottom: 20px;
+}
+
+code {
+	border: 1px solid lighten(@disabled, 30%);
+	margin: 0px 2px;
+	padding: 5px 10px;
+	font-size: 12px;
+}
+
+pre code {
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	border-radius: @global-radius;
+}
+
+pre, code {
+	font-family: Consolas, 'Liberation Mono', Courier, monospace;
+	color: @font-color;
+	background: lighten(@disabled, 45%);
+    border-radius:@global-radius;
+}
+
+pre, pre code {
+	font-size: @base-font-size - .3rem;
+}

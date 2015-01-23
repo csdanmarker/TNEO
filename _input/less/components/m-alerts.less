@@ -1,0 +1,48 @@
+// ==============================================
+//				Alerts
+// ==============================================
+
+.warning, .success, .error{
+	padding:1rem;
+	display: inline-block;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	width:100%;
+	line-height: @base-line-height;
+	margin:1rem 0;
+}
+
+i.close{	
+	padding:0 .4rem;
+	float: right;
+
+		&:before{
+			font-family: FontAwesome;
+			content: "\f00d";
+			float:right;
+			font-style: normal;
+		}
+		
+		&:hover{
+			cursor: pointer;
+		}
+
+	}
+
+.warning{
+	background-color: @warning-color;
+	color:darken(@warning-color, 40%);
+}
+
+.success{
+	background-color: @success-color;
+	color:darken(@success-color, 40%);
+}
+
+.error{
+	background-color: @error-color;
+	color:darken(@error-color, 40%);
+}

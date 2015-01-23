@@ -1,0 +1,887 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sparkplug Framework</title>
+
+	<!-- Compiled SMACSS -->
+	<link rel="stylesheet" href="_output/css/main.css">
+
+	<!-- Web Font -->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+</head>
+
+<body class="examplePage">
+
+	<nav class="navToggle show-for-small doc-menu-mobile">
+		<a href="#" class="navToggle-burger">Sections</a>
+		<ul data-scrollSpy data-offset="55"></ul>
+	</nav>
+
+	<div class="row">
+		<div class="large-3 medium-2 columns hide-for-small">
+			<ul class="doc-menu" data-scrollSpy>
+				<li>
+					<h5>Sections</h5>
+				</li>
+			</ul>
+		</div>
+
+
+		<div class="large-8 large-offset-4 medium-8 medium-offset-4 columns">
+
+			<!-- Grid -->
+			<h1 class="exampleSection" id="grid">Grid</h1>
+
+
+			<code>.large-[#] .medium-[#] .small-[#] .column</code>
+
+
+			<div class="grid">
+
+
+				<h5>Basic Grid</h5>
+				<p>The grid is really easy to use. for instance if you put .large-4.columns on a div it will span 4/12ths of it's parent container on "Large" screens. When resized below "large" it will break down to 100% width. This can be any combination
+					of numbers as long as it ads up to the number of your total columns.</p>
+				<div class="row">
+					<div class="large-4 columns">
+						<span class="">large-4</span>
+
+					</div>
+					<div class="large-4 columns">
+						<span class="">large-4</span>
+
+					</div>
+					<div class="large-4 columns">
+						<span class="">large-4</span>
+
+					</div>
+				</div>
+
+				<h5>Targeting Screen Sizes</h5>
+
+				<p>Often times you need medium and small screens to display multiple columns. You can easily target those screens using the .small or .medium column class. By default, these sizes cascade. so if you put small-4 on a div. It will render as
+					4/12ths width on small, medium and large.</p>
+
+				<div class="row">
+
+					<div class="medium-4 columns">
+						<span class="">Medium-4</span>
+					</div>
+
+					<div class="medium-4 columns">
+						<span class="">Medium-4</span>	
+					</div>
+
+					<div class="medium-4 columns">
+						<span class="">Medium-4</span>	
+					</div>
+
+					<div class="small-4 columns">
+						<span class="">Small-4</span>
+					</div>
+
+					<div class="small-4 columns">
+						<span class="">Small-4</span>	
+					</div>
+
+					<div class="small-4 columns">
+						<span class="">Small-4</span>	
+					</div>
+				</div>
+
+
+				<h5>Combining Different Column Widths</h5>
+				<p>You guessed it, you can combine "large", "medium" and "small" column widths to target each viewport specifically.</p>
+
+
+
+				<div class="grid">
+
+					<div class="row">
+						<div class="large-2 medium-6 small-4 column">
+							<span class="show-for-large">large-2</span>
+							<span class="show-for-medium">medium-6</span>
+							<span class="show-for-small">small-4</span>
+						</div>
+						<div class="large-2 medium-6 small-4 column">
+							<span class="show-for-large">large-2</span>
+							<span class="show-for-medium">medium-6</span>
+							<span class="show-for-small">small-4</span>
+						</div>
+						<div class="large-2 medium-6 small-4 column">
+							<span class="show-for-large">large-2</span>
+							<span class="show-for-medium">medium-6</span>
+							<span class="show-for-small">small-4</span>
+						</div>
+						<div class="large-2 medium-6 small-4 column">
+							<span class="show-for-large">large-2</span>
+							<span class="show-for-medium">medium-6</span>
+							<span class="show-for-small">small-4</span>
+						</div>
+						<div class="large-2 medium-6 small-4 column">
+							<span class="show-for-large">large-2</span>
+							<span class="show-for-medium">medium-6</span>
+							<span class="show-for-small">small-4</span>
+						</div>
+						<div class="large-2 medium-6 small-4 column">
+							<span class="show-for-large">large-2</span>
+							<span class="show-for-medium">medium-6</span>
+							<span class="show-for-small">small-4</span>
+						</div>
+
+				
+
+
+
+				
+						<div class="large-3 column">
+							<span class="show-for-large">large-3</span>
+							<span class="show-for-medium">medium-12</span>
+							<span class="show-for-small">small-12</span>
+						</div>
+						<div class="large-3 column">
+							<span class="show-for-large">large-3</span>
+							<span class="show-for-medium">medium-12</span>
+							<span class="show-for-small">small-12</span>
+						</div>
+						<div class="large-3 column">
+							<span class="show-for-large">large-3</span>
+							<span class="show-for-medium">medium-12</span>
+							<span class="show-for-small">Small-12</span>
+						</div>
+						<div class="large-3 column">
+							<span class="show-for-large">large-3</span>
+							<span class="show-for-medium">medium-12</span>
+							<span class="show-for-small">small-12</span>
+						</div>
+				
+
+				
+						<div class="large-4 small-4 column">
+							<span class="show-for-large">large-4</span>
+							<span class="show-for-medium">medium-4</span>
+							<span class="show-for-small">small-3</span>
+						</div>
+
+						<div class="large-4 small-4 column">
+							<span class="show-for-large">large-4</span>
+							<span class="show-for-medium">medium-4</span>
+							<span class="show-for-small">small-3</span>
+						</div>
+
+						<div class="large-4 small-4 column">
+							<span class="show-for-large">large-4</span>
+							<span class="show-for-medium">medium-4</span>
+							<span class="show-for-small">small-3</span>
+						</div>
+
+						<div class="large-6 medium-6 small-12 column">
+							<span class="show-for-large">large-6</span>
+							<span class="show-for-medium">medium-6</span>
+							<span class="show-for-small">small-12</span>
+						</div>
+
+						<div class="large-6 medium-6 small-12 column">
+							<span class="show-for-large">large-6</span>
+							<span class="show-for-medium">medium-6</span>
+							<span class="show-for-small">small-12</span>
+						</div>
+					</div>
+
+					<h5>Nesting Columns</h5>
+
+					<p>Sparkplug makes it really easy to nest columns too!</p>
+
+					<div class="row">
+
+						<div class="medium-6 columns">
+							<span class="">Medium-6</span>
+							<div class="medium-6 columns">
+								<span>Medium-6</span>
+							</div>
+							<div class="medium-6 columns">
+								<span>Medium-6</span>
+							</div>
+						</div>
+
+						<div class="medium-6 columns">
+							<span class="">Medium-6</span>	
+
+							<div class="medium-6 columns">
+								<span>Medium-6</span>
+							</div>
+							<div class="medium-6 columns">
+								<span>Medium-6</span>
+							</div>
+						</div>
+
+
+					</div>
+
+					<h5>Offsets</h5>
+					<p>If you need some space between your columns you can use the offset class. Below we declare the column width (large-5) and the offset for the large screen (large-offset-1). Since we only declared large a large offset it will only apply
+						to large screen widths. it breaks down to 100% width on medium and small.</p>
+					<div class="row">
+						<div class="column large-offset-1 large-5">
+							<span>.Large-offset-1 .large-5</span>
+						</div>
+
+						<div class="column large-offset-1 large-5">
+							<span>.large-offset-1 .large-5</span>
+						</div>
+					</div>
+
+					<h5>Push and Pull</h5>
+					<p>Sometimes you want columns to appear in a different order when on different screens. Push / pull classes allow you to target column order on screen width.</p>
+					<div class="row">
+						<div class="column large-push-8 medium-4">
+							<span>large-push-8</span>
+						</div>
+
+						<div class="column large-pull-4 medium-8">
+							<span>large-pull-4</span>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- End Grid -->
+
+			<!-- Text Treatment -->
+
+			<h1 class="exampleSection" id="textTreatment">Text Treatment</h1>
+
+			<h5>Paragraphs</h5>
+			<p>Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean shorts Shoreditch banjo occaecat. Enim delectus Pitchfork, nihil gluten-free vinyl chambray letterpress gastropub proident hashtag Etsy et officia. Non salvia quis gastropub
+				Kickstarter, slow-carb American Apparel kitsch magna. Aliquip pop-up esse literally, Thundercats quis ennui readymade tempor ugh fap DIY. +1 bitters selfies aesthetic crucifix. Neutra organic Shoreditch, excepteur biodiesel dreamcatcher
+				put a bird on it sed banjo in Etsy ennui Schlitz try-hard asymmetrical. Sunt et jean shorts id.</p>
+
+			<h5>Headings</h5>
+			<h1>H1 Heading</h1>
+			<h2>H2 Heading</h2>
+			<h3>H3 Heading</h3>
+			<h4>H4 Heading</h4>
+			<h5>H5 Heading</h5>
+			<h6>H6 Heading</h6>
+			
+			<h5>Links</h5>
+			<p><a href="#">This is a link</a>
+			</p>
+			<p><a href="#">This is another link</a>
+			</p>
+			<p><a href="#">This is yet another link</a>
+			</p>
+
+
+			<h5>Unordered List</h5>
+			<ul>
+				<li>This is a list item in an unordered list</li>
+
+				<li>Lists can be nested inside of each other
+					<ul>
+						<li>This is a nested list item</li>
+						<li>This is another nested list item in an unordered list</li>
+					</ul>
+				</li>
+
+				<li>This is the last list item</li>
+			</ul>
+
+			<h5>Blockquote</h5>
+			<blockquote>
+				McSweeney's hella put a bird on it, pork belly blue bottle mlkshk dreamcatcher readymade aesthetic. Wayfarers fixie actually Bushwick. Skateboard kale chips try-hard Neutra post-ironic. Mixtape single-origin coffee wayfarers, fanny pack flannel Carles
+				jean shorts artisan pork belly.
+			</blockquote>
+
+
+			<h5>Emphasis and Modifiers</h5>
+			<p><code>sup</code> Cred tattooed jean shorts, <sup>church-key</sup> organic wayfarers</p>
+			<p><code>sub</code> Cred tattooed jean shorts, <sub>church-key</sub> organic wayfarers</p>
+
+			<p><code>em</code> Cred tattooed jean shorts, <em>church-key</em> organic wayfarers</p>
+			<p><code>b</code> Cred tattooed jean shorts, <b>church-key</b> organic wayfarers</p>
+			<p><code>del</code> Cred tattooed jean shorts, <del>church-key</del> organic wayfarers</p>
+			<p><code>code</code> Cred tattooed jean shorts, <code>church-key</code> organic wayfarers</p>
+
+			<!-- End Text Treatment -->
+
+			<!-- Buttons -->
+			<h1 class="exampleSection" id="buttons">Buttons</h1>
+
+
+			<h5>Standard</h5>
+
+
+			<div class="large-12 column">
+				<p><code>.button</code>  <code>.buttonOutline</code>
+				</p>
+				<a href="#" class="button">Standard Button</a>
+				<a href="#" class="buttonOutline">Outline Button</a>
+
+			</div>
+
+
+			<h1 class="exampleSection" id="cssComponents">CSS Components</h1>
+			<h5>Pagination</h5>
+
+
+			<div class="pagination">
+				<ul>
+					<li><a href="#">«</a>
+					</li>
+					<li><a href="#">1</a>
+					</li>
+					<li><a href="#">2</a>
+					</li>
+					<li><a href="#">3</a>
+					</li>
+					<li><a href="#">4</a>
+					</li>
+					<li><a href="#">5</a>
+					</li>
+					<li><a href="#">6</a>
+					</li>
+					<li><a href="#">»</a>
+					</li>
+				</ul>
+			</div>
+
+			<h5>Breadcrumbs</h5>
+
+			<div class="breadcrumbs">
+				<ul>
+					<li><a href="#">Home</a>
+					</li>
+					<li><a href="#">About</a>
+					</li>
+					<li><a href="#">Employees</a>
+					</li>
+
+				</ul>
+			</div>
+
+			<h1 class="exampleSection" id="Gradients">Gradients</h1>
+
+			<div class="large-6 columns">
+				gradient
+				<div class="gradient">
+
+				</div>
+			</div>
+
+			<div class="large-6 columns">
+				gradient
+				<div class="gradient">
+
+				</div>
+			</div>
+
+
+
+
+			<!-- End Buttons -->
+
+			<!-- JavaScript Components -->
+
+			<h1 class="exampleSection" id="javascriptComponents">JavaScript Components</h1>
+
+			<!-- <h5>Message Boxes</h5>
+
+			<code>.error</code>
+			<div class="error">
+				<i class="close"></i>
+				Error Cred tattooed jean shorts, church-key organic wayfarers fashion axe typewriter disrupt Vice authentic fap messenger bag. Echo Park Wes Anderson asymmetrical Neutra.
+			</div>
+				
+			<code>.warning</code>
+			<div class="warning">
+				<i class="close"></i>
+				Error Cred tattooed jean shorts, church-key organic wayfarers fashion axe typewriter disrupt Vice authentic fap messenger bag. Echo Park Wes Anderson asymmetrical Neutra.
+			</div>
+			
+			<code>.success</code>
+			<div class="success">
+				<i class="close"></i>
+				Error Cred tattooed jean shorts, church-key organic wayfarers fashion axe typewriter disrupt Vice authentic fap messenger bag. Echo Park Wes Anderson asymmetrical Neutra.
+			</div> -->
+
+			<h5>Active Dialogue</h5>
+			<p>Active Dialogue is a shifty-nifty utility that allows you to show, hide, and cycle content in modal pop-up boxes.</p>
+			<p><a data-fire="box-1">Launch Dialogue Box 1</a>
+			</p>
+
+			<div class="modal" id="box-1">
+				<div class="modal-box">
+					<h3>Dialogue Box 1</h3>
+					<p>Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean shorts Shoreditch banjo occaecat. Enim delectus Pitchfork, nihil gluten-free vinyl chambray letterpress gastropub proident hashtag Etsy et officia. Non salvia quis
+						gastropub Kickstarter, slow-carb American Apparel kitsch magna.</p>
+
+					<div class="navigation">
+						<a class="modal-next btn">Next</a>
+						<a class="modal-prev btn">Previous</a>
+					</div>
+				</div>
+			</div>
+
+			<p><a data-fire="box-2">Launch Dialogue Box 2</a>
+			</p>
+
+			<div class="modal" id="box-2">
+				<div class="modal-box">
+					<h3>Dialogue Box 2</h3>
+					<p>Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean shorts Shoreditch banjo occaecat. Enim delectus Pitchfork, nihil gluten-free vinyl chambray letterpress gastropub proident hashtag Etsy et officia. Non salvia quis
+						gastropub Kickstarter, slow-carb American Apparel kitsch magna.</p>
+					<p>Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean shorts Shoreditch banjo occaecat. Enim delectus Pitchfork, nihil gluten-free vinyl chambray letterpress gastropub proident hashtag Etsy et officia. Non salvia quis
+						gastropub Kickstarter, slow-carb American Apparel kitsch magna.</p>
+
+					<div class="navigation">
+						<a class="modal-next btn">Next</a>
+						<a class="modal-prev btn">Previous</a>
+					</div>
+				</div>
+			</div>
+
+			<p><a data-fire="box-3">Launch Dialogue Box 3</a>
+			</p>
+
+			<div class="modal" id="box-3">
+				<div class="modal-box">
+					<h3>Dialogue Box 3</h3>
+					<p>Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean shorts Shoreditch banjo occaecat. Enim delectus Pitchfork, nihil gluten-free vinyl chambray letterpress gastropub proident hashtag Etsy et officia. Non salvia quis
+						gastropub Kickstarter, slow-carb American Apparel kitsch magna.</p>
+					<p>Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean shorts Shoreditch banjo occaecat. Enim delectus Pitchfork, nihil gluten-free vinyl chambray letterpress gastropub proident hashtag Etsy et officia. Non salvia quis
+						gastropub Kickstarter, slow-carb American Apparel kitsch magna.</p>
+					<p>Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean shorts Shoreditch banjo occaecat. Enim delectus Pitchfork, nihil gluten-free vinyl chambray letterpress gastropub proident hashtag Etsy et officia. Non salvia quis
+						gastropub Kickstarter, slow-carb American Apparel kitsch magna.</p>
+
+					<div class="navigation">
+						<a class="modal-next btn">Next</a>
+						<a class="modal-prev btn">Previous</a>
+					</div>
+				</div>
+			</div>
+
+
+			<h5>Good Slideshow</h5>
+			<p>Good Slideshow is a basic utility for image slideshows with CSS3 transitions. Notes: Good Slideshow assumes images match dimensions. The slideshow width will match image width unless the image width is greater than the parent container, in
+				which case the slideshow will stretch to the width of the container.</p>
+
+			<ul data-slideshow>
+				<li>
+					<img src="_output/img/image-1.jpg">
+				</li>
+				<li>
+					<img src="_output/img/image-2.jpg">
+				</li>
+				<li>
+					<img src="_output/img/image-3.jpg">
+				</li>
+				<li>
+					<img src="_output/img/image-4.jpg">
+				</li>
+				<li>
+					<img src="_output/img/image-5.jpg">
+				</li>
+				<li>
+					<img src="_output/img/image-6.jpg">
+				</li>
+			</ul>
+
+
+
+
+
+			<h5>Content Collapse</h5>
+			<p>Content Collapse is a simple utility for collapsing your things.</p>
+			<div class="contentCollapse">
+				<i class="fa contentCollapse-plus"></i>
+				<a data-toggle>Things 1</a>
+
+				<div class="contentCollapse-content">
+					<p>Newman: But you remember this: when you control the mail, you control... information. Elaine: Perhaps, there's more to Newman than meets the eye. Jerry: No. there's less. Mr. Peterman: None other than Ethel Kennedy. A woman whose triumph
+						in the face of tragedy is exceeded only by her proclivity to procreate. Kramer: Karate. It's a lifetime pursuit of balance and harmony. Jerry: But with punching and kicking. George: I have never been anyone's type, but apparently,
+						this Marisa Tomei loves funny, quirky, bald men! George: George is getting upset! George: Who buys an umbrella anyway? You can get them for free at the coffee shop in those metal cans.</p>
+
+					<p>Jerry: That is one magic loogie. George: Yeah, well, the jerk store called, they're running out of you. Jerry: Well, sometimes we do actually have to get up early, but a man will always trade sleep for sex." Morty Seinfeld: How could
+						you spend $200 on a tip calculator?, Jerry: Alright. You’re on a desert island, you can bring five books. Which five do you take? George: I gotta read five books. Jerry: Why would anybody want a friend? Frank Costanza: George,
+						we've had it with you. Understand? We love you like a son, but even parents have limits.</p>
+				</div>
+			</div>
+
+			<div class="contentCollapse">
+				<i class="fa contentCollapse-plus"></i>
+
+				<a data-toggle>Things 2</a>
+				<div class="contentCollapse-content">
+					<p>laine: No, I don't have a square to spare. I can't spare a square. Jerry: So you think it's a non-vite? Elaine: It's an un-vitation. George: The sea was angry that day, my friends. Like an old man trying to send back soup in a deli.
+						The Bubble Boy: What are you looking at? You never seen a kid in a bubble before. Jerry: Do you really want a shower radio? I guess there's no better place to dance than a slick surface next to a glass door. Latvian orthodox: What
+						aspect of the faith do you find particularly attractive? George: I think the hats. Kramer: Boxers! How do you wear these things? Look at that–they’re bagging up, they’re rising in, and there’s nothing holding me in place. Kramer:
+						What are you thinking about, Jerry, marriage? Family? They're prisons! Man-made prisons. You're doing time? Dec. 23. Jerry: Why do I always have the feeling everybody's doing something better than me on Saturday afternoons? George:
+						I think she finds my stupidity charming? Jerry: I don't return fruit. Fruit is a gamble. I know that going in.
+					</p>
+					<p>George: I say stupid things all the time. I can’t go two minutes without saying something stupid. George: Is it my imagination, or do really good-looking women walk a lot faster than everybody else. Jerry (receiving an ugly new hat):
+						Why don't you put it in the car so I don't accidentally toss it in that dumpster. George: I can't be blind, Jerry. The blind are courageous. ; Newman: Black market shower heads. All made in the former Yugoslavia, and from what
+						I hear the Serbs are fanatic about their showers! Jerry: You know the difference between a dentist and a sadist, don't you? Newer magazines.</p>
+				</div>
+			</div>
+			<h5>Equal Height</h5>
+			<div class="medium-12 columns">
+				<p>Use the <code>.equalHeight</code> class to match element height when the DOM loads. The utility takes the height of the tallest element and applies it to all other <code>.equalHeight</code> elements. Note: you can set the point at which the
+					elements stack in sparkplug.js.</p>
+			</div>
+			<div class="medium-4 columns">
+				<p class="equalHeight demo">
+					Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean
+
+				</p>
+			</div>
+
+			<div class="medium-4 columns">
+				<p class="equalHeight ">
+					Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean shorts Shoreditch banjo occaecat. Non salvia quis gastropub Kickstarter, slow-carb American Apparel kitsch magna.
+
+				</p>
+			</div>
+
+			<div class="medium-4 columns">
+				<p class="equalHeight ">
+					Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean shorts Shoreditch banjo occaecat. Non salvia quis gastropub Kickstarter, slow-carb American Apparel kitsch magna.
+					<br>Minim laborum farm-to-table, semiotics synth delectus ut
+				</p>
+			</div>
+
+			<h5>Toggle Menu</h5>
+			<nav class="navToggle">
+				<a href="#" class="navToggle-burger">Menu</a>
+				<ul>
+					<li><a href="#">Home</a>
+					</li>
+					<li><a href="#">About</a>
+					</li>
+					<li><a href="#">Services</a>
+					</li>
+					<li><a href="#">History</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- End Javascript Components-->
+
+			<!-- Visibility -->
+
+			<h1 class="exampleSection" id="visibility">Visibility</h1>
+			<h5>Show For Specific Devices</h5>
+			<code>.show-for-small</code>
+			<code>.show-for-medium</code>
+			<code>.show-for-large</code>
+			<p class="show-for-small">You should only see this if you are on a phone sized screen.</p>
+			<p class="show-for-medium">You should only see this if you are on a tablet sized screen.</p>
+			<p class="show-for-large">You should only see this if you are on a desktop sized screen.</p>
+
+			<h5>Hide For Specific Device</h5>
+			<code>.hide-for-small</code>
+			<code>.hide-for-medium</code>
+			<code>.hide-for-large</code>
+			<p class="hide-for-small">You should only see this if you are on a tablet or desktop sized screen.</p>
+			<p class="hide-for-medium">You should only see this if you are on a phone or desktop sized screen.</p>
+			<p class="hide-for-large">You should only see this if you are on a phone or tablet sized screen.</p>
+
+			<!-- End Visibility -->
+
+			<!-- Forms -->
+
+			<h1 class="exampleSection" id="formElements">Forms</h1>
+
+			<p>So your friends and your mother-in-law can send you a message congratulating you on your new website and technical prowess.</p>
+
+			<div class="medium-6 columns">
+				<h5>Label above</h5>
+				<form method="post" class="forms">
+					<label>
+						Email
+						<input type="email" name="user-email" />
+					</label>
+					<label>
+						Password
+						<input type="password" name="user-password" />
+					</label>
+				</form>
+
+
+			</div>
+			<div class="medium-6 columns">
+				<h5>Label inside</h5>
+				<form method="post" class="forms">
+					<label>
+						&nbsp;
+						<input type="email" name="user-email" placeholder="Email" />
+					</label>
+					<label>
+						&nbsp;
+						<input type="password" name="user-password" placeholder="Password" />
+					</label>
+				</form>
+			</div>
+			<div class="medium-6 columns">
+				<h5>Input Descriptions</h5>
+
+				<form method="post" class="forms">
+					<label>
+						Name
+						<span class="forms-desc">Always nice to feel important.</span>
+						<input type="text" name="user-name" class="width-50" />
+					</label>
+					<label>
+						Email
+						<span class="forms-desc">No we actually really need it.</span>
+						<input type="email" name="user-email" class="width-50" />
+					</label>
+					<label>
+						Address
+						<span class="req">*</span>
+						<input type="email" name="user-email" class="width-50" />
+					</label>
+				</form>
+			</div>
+
+			<div class="medium-6 columns">
+				<h5>Text Area</h5>
+				<form class="forms">
+					<label>Message
+						<span class="forms-desc">Send a delicious message.</span>
+						<textarea></textarea>
+					</label>
+				</form>
+
+			</div>
+
+			<div class="medium-12 columns">
+				<h5>Other</h5>
+				<ul class="forms-list">
+					<li>
+						<input type="checkbox" name="checkbox-1" id="checkbox-1" value="0">
+						<label for="checkbox-1">Check 1</label>
+					</li>
+					<li>
+						<input type="checkbox" name="checkbox-2" id="checkbox-2" value="0">
+						<label for="checkbox-2">Check 2</label>
+					</li>
+					<li>
+						<input type="checkbox" name="checkbox-3" id="checkbox-3" value="0">
+						<label for="checkbox-3">Check 3</label>
+					</li>
+				</ul>
+
+
+				<ul class="forms-list">
+					<li>
+						<input type="radio" name="radio-group-1" id="radio-1" value="1">
+						<label for="radio-1">Radio 1</label>
+					</li>
+					<li>
+						<input type="radio" name="radio-group-1" id="radio-2" value="2">
+						<label for="radio-2">Radio 2</label>
+					</li>
+					<li>
+						<input type="radio" name="radio-group-1" id="radio-3" value="3">
+						<label for="radio-3">Radio 3</label>
+					</li>
+				</ul>
+
+				<form method="post" class="forms">
+					Phone number
+					<ul class="forms-inline-list">
+						<li>
+							(
+							<input type="text" name="phone-prefix" size="3">)
+						</li>
+						<li>
+							<input type="text" name="phone-number-1" size="3">
+						</li>
+						<li>-
+							<input type="text" name="phone-number-2" size="3">
+						</li>
+
+						<li>
+							&nbsp;ext:
+							<input type="text" name="phone-ext" size="3">
+						</li>
+						<li>
+							<div class="forms-desc">Needed if there are questions about your order</div>
+						</li>
+					</ul>
+				</form>
+			</div>
+			<!-- End Forms -->
+			<h1 class="exampleSection" id="tables">Tables</h1>
+			<p>We all love tables! Beleive it or not, Sparkplug makes them even better.</p>
+			<h5>Default Table</h5>
+			<code>*No Class Required</code>
+			<table>
+				<caption>Table Caption</caption>
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Points</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Jill</td>
+						<td>Smith</td>
+						<td>50</td>
+					</tr>
+					<tr>
+						<td>Eve</td>
+						<td>Jackson</td>
+						<td>94</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="2">Total points</td>
+						<td>223</td>
+					</tr>
+				</tfoot>
+			</table>
+
+			<h5>Bordered Table</h5>
+			<code>.table-bordered</code>
+			<table class="table-bordered">
+				<caption>Table Caption</caption>
+
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Points</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Jill</td>
+						<td>Smith</td>
+						<td>50</td>
+					</tr>
+					<tr>
+						<td>Eve</td>
+						<td>Jackson</td>
+						<td>94</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="2">Total points</td>
+						<td>223</td>
+					</tr>
+				</tfoot>
+			</table>
+
+
+			<h5>Responsive Table</h5>
+			<code>.table-container > table</code>
+			<div class="table-container">
+				<table class="table-striped no-wrap">
+					<caption>Table Caption</caption>
+
+					<thead>
+						<tr>
+							<th>Head 1</th>
+							<th>Head 2</th>
+							<th>Head 3</th>
+							<th>Head 4</th>
+							<th>Head 5</th>
+							<th>Head 6</th>
+							<th>Head 7</th>
+							<th>Head 8</th>
+							<th>Head 9</th>
+							<th>Head 10</th>
+							<th>Head 11</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+						</tr>
+						<tr>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+						</tr>
+						<tr>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+						</tr>
+						<tr>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+							<td>Adipisicing Elit</td>
+							<td>Lorem Ipsum</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- End Tables -->
+			<!-- Tables -->
+
+		</div>
+	</div>
+	<script>
+		(function() {
+			$('.exampleSection').each(function() {
+				var id = $(this).attr('id');
+				var linkText = $(this).text();
+				var listItem = '<li><a href="#' + id + '">' + linkText + '</a></li>';
+
+				$('[data-scrollSpy]').append(listItem);
+			});
+		})();
+	</script>
+	<script src="_output/js/wow.min.js" type="text/javascript"></script>
+	<script src="_output/js/sparkplug.js" type="text/javascript"></script>
+</body>
+
+</html>

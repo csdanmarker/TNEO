@@ -1,0 +1,310 @@
+// ==============================================
+//				Navigation
+// ==============================================
+
+.doNothing{	
+	display: block;
+}
+.doNothing:after{
+	visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.doNothing ul{
+	margin: 0;
+	display: block;
+	float: left;
+}
+
+.doNothing ul li{
+	float:left;
+	list-style: none;
+}
+.doNothing ul li a{
+	text-decoration: none;
+	padding: 1rem;
+	font-size: 1rem;
+	float: left;
+	color: @font-color;
+	border-radius: @global-radius;
+	font-weight:100;
+	.transition();
+}
+
+@media only screen and (min-width: @large-up) {
+	.doNothing ul li a:hover{
+		color: @white;
+		background-color: @secondary-color;
+		.transition();
+	}
+}
+
+
+// navBlock Start
+
+.navBlock {
+	display: block;
+	background-color: @primary-color;	
+	border-radius: @global-radius;
+}
+
+.navBlock:after {
+	visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;	
+}
+
+.navBlock ul {
+	margin-left: 0;
+}
+
+.navBlock ul li {
+	width: 50%;
+	float: left;
+	list-style: none;
+}
+
+.navBlock ul li a {
+	display: block;
+	padding: 1rem 2rem;
+	text-decoration: none;
+	color: @white;
+	text-align:center;
+	font-weight:100;
+	.transition();
+}
+
+@media only screen and (min-width: @medium-up) {
+	
+	.navBlock li{
+		width: 33.3333%;
+	}	
+}
+@media only screen and (min-width: @large-up) {
+
+	.navBlock ul li a:hover {
+		background-color: @secondary-color;
+		.transition();
+	}
+
+	.navBlock ul {
+		margin:0;
+	}
+	.navBlock ul li{
+		width: auto;
+	}
+
+}
+
+// ---------- navBlock End
+
+
+// navToggle Start
+
+.navToggle{
+	.transition();
+	border-radius: @global-radius;
+	display: block;
+	color: @font-color;
+	overflow: hidden;
+	width:100%;
+	background-color: @primary-color;
+	color: @white;
+}
+
+.navToggle ul{
+	.transition();
+	visibility: hidden;
+	position: absolute;
+}
+
+.navToggle:after{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.navToggle ul{
+	margin: 0;
+	float: left;
+	width: 100%;
+}
+.navToggle ul li{
+	width: 100%;
+	float: left;
+	list-style: none;
+}
+.navToggle ul li a{
+	display: block;
+	padding: 1rem 1rem;
+	text-decoration: none;
+	font-weight:100;
+	color: @white;
+	.transition();
+}
+
+.navToggle{}
+.navToggle-burger{
+	float: right;
+	padding: 10px;
+	font-size: 1em;
+	margin-right: 5px;
+	text-decoration: none;
+	text-transform: capitalize;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin:.5em 1em .5em 0;
+	color: @font-color;
+	.transition();
+}
+.navToggle-burger:hover{
+	background-color: @primary-color;
+	color:@white;
+	.transition();
+}
+
+@media only screen and (min-width: @medium-up) {}
+
+@media only screen and (min-width: @large-up) {
+
+	.navToggle ul li{
+		width: auto;
+	}
+
+	.navToggle-burger{
+		display: none;
+	}
+
+	.navToggle ul li a:hover{
+		background-color: darken(@primary-color, 10%);
+		color:@white;
+		.transition();
+	}
+
+}
+
+
+// ---------- navToggle End
+
+
+// thumbNav Start
+
+.thumbNav{
+	position:fixed;
+	z-index:1000;
+	width:50px;
+	height:50px;
+	background-color: @secondary-color;
+	border-radius:@global-radius;
+	overflow: hidden;
+	bottom:0;
+	margin-bottom:20px;
+	right:20px;
+	.transition(all ease .35s);
+}
+
+.thumbNav i{
+	position: absolute;
+	z-index:10000000000;
+	bottom: 0;
+	right: 0;
+	width: 50px;
+	display: block;
+	text-align: center;
+	padding-bottom: 16px;
+	color: @white;
+	font-size: 20px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.thumbNav ul{
+	margin:0;
+	visibility:hidden;
+	opacity:0;
+	list-style:none;
+	position:absolute;
+	width:100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+.thumbNav ul li a{
+	display: block;
+	font-size: 1rem;
+	width:100%;
+	padding:1rem 2rem;
+	color:@white;
+	text-decoration: none;
+	font-weight:100;
+	-webkit-font-smoothing: antialiased;
+}
+
+.thumbNav.active{
+	.transition(all ease .35s);
+	border-radius:@global-radius;
+	width: 88%;	
+}
+
+.thumbNav.active ul{
+	.transition(all ease .35s);
+	visibility:visible;
+	opacity:1;
+}
+
+.iconSprite i:first-child{
+	.transition(all ease .35s);
+	opacity:1;
+	visibility: visible;	
+}
+
+.iconSprite i:last-child{
+	.transition(all ease .35s);
+	opacity:0;
+	visibility: hidden;
+}
+
+@media only screen and (min-width: @medium-up) {}
+
+@media only screen and (min-width: @large-up) {
+	
+	.thumbNav{
+		position: static;
+		width:100%;
+		height:auto;
+	}
+
+	.thumbNav ul{
+		position: static;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.thumbNav ul li {
+		display: inline-block;
+	}
+
+	.thumbNav ul li a {
+		padding:.6rem 2rem;
+	}
+
+	.thumbNav ul li a:hover{
+		background-color: @primary-color;
+		.transition();
+	}	
+
+	.iconSprite{
+		display: none;
+	}
+
+}
+
+// ---------- End thumbNav
+
